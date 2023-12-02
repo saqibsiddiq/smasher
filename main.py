@@ -6,21 +6,21 @@ pygame.init()
 RUNNING = True
 WIDTH = 1250
 HEIGHT = 690
-FONT = pygame.font.Font('../graphics/subatomic.ttf',50)
+FONT = pygame.font.Font('graphics/subatomic.ttf',50)
 CLOCK = pygame.time.Clock()
 
 pygame.display.set_caption('spacy')
 display_surf = pygame.display.set_mode((WIDTH,HEIGHT))
 
-background_img = pygame.image.load('../graphics/background.png').convert()
+background_img = pygame.image.load('graphics/background.png').convert()
 
-ship_img = pygame.image.load('../graphics/ship.png').convert_alpha()
+ship_img = pygame.image.load('graphics/ship.png').convert_alpha()
 ship_rect = ship_img.get_rect(center = (WIDTH/2,HEIGHT/2))
 
-laser_img = pygame.image.load('../graphics/laser.png').convert_alpha()
+laser_img = pygame.image.load('graphics/laser.png').convert_alpha()
 laser_list = []
 
-meteor_img = pygame.image.load('../graphics/meteor.png').convert_alpha()
+meteor_img = pygame.image.load('graphics/meteor.png').convert_alpha()
 meteor_list = []
 
 can_shoot = True
@@ -29,9 +29,9 @@ shoot_timer = None
 meteor_timer = pygame.event.custom_type()
 pygame.time.set_timer(meteor_timer,400)
 
-background_sound = pygame.mixer.Sound('../sounds/music.wav')
-laser_sound = pygame.mixer.Sound('../sounds/laser.ogg')
-collision_sound = pygame.mixer.Sound('../sounds/explosion.wav')
+background_sound = pygame.mixer.Sound('sounds/music.wav')
+laser_sound = pygame.mixer.Sound('sounds/laser.ogg')
+collision_sound = pygame.mixer.Sound('sounds/explosion.wav')
 
 background_sound.play(loops= -1)
 
